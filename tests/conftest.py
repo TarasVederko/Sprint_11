@@ -26,7 +26,7 @@ def open_registration_window(driver):
     #open registration window
     driver.find_element(*Locators.ENTRANCE_ACCOUNT_BUTTON).click()
     driver.find_element(*Locators.REGISTRATION_FORM_LINK).click()
-    yield driver
+    return driver
 
 @pytest.fixture
 def driver_with_account(open_registration_window):
@@ -38,7 +38,7 @@ def driver_with_account(open_registration_window):
     driver.find_element(*Locators.PASSWORD_INPUT_FIELD).send_keys(password)
     driver.find_element(*Locators.REGISTRATION_BUTTON).click()
     WebDriverWait(driver, 10).until(EC.visibility_of_element_located(Locators.BUTTON_ENTRANCE))
-    yield driver, email, password
+    return driver, email, password
 
 @pytest.fixture
 def driver_logined(driver_with_account):
@@ -57,7 +57,7 @@ def driver_logined(driver_with_account):
 
     driver.find_element(*Locators.BUTTON_ENTRANCE).click()
     WebDriverWait(driver, 10).until(EC.visibility_of_element_located(Locators.ENTRANCE_ACCOUNT_BUTTON))
-    yield driver
+    return driver
 
 
 

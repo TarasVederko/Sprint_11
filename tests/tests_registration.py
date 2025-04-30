@@ -20,7 +20,7 @@ class TestRegistrationWithNewCredential:
         # act
         driver.find_element(*Locators.REGISTRATION_BUTTON).click()
         WebDriverWait(driver, 10).until(EC.visibility_of_element_located(Locators.BUTTON_ENTRANCE))
-        result = driver.curret_url
+        result = driver.current_url
         expected = login_site
 
         # assert
@@ -60,7 +60,7 @@ class TestRegistrationWithNewCredential:
 class TestEntranceToPersonalCabinet:
 
      def test_entrance_through_button_on_main(self, driver_with_account):
-         driver = driver_with_account
+         driver, email, password = driver_with_account
          driver.find_element(*Locators.BUTTON_ENTRANCE).click()
          driver.find_element(*Locators.EMAIL_INPUT_FIELD_ENTRANCE).send_keys(email)
          driver.find_element(*Locators.PASSWORD_INPUT_FIELD_ENTRANCE).send_keys(password)
@@ -71,7 +71,7 @@ class TestEntranceToPersonalCabinet:
          assert driver.find_element(*Locators.MAKE_ORDER_BUTTON).is_displayed()
 
      def test_entrance_through_cabinet(self,driver_with_account):
-         driver = driver_with_account
+         driver, email, password = driver_with_account
          driver.find_element(*Locators.ENTRANCE_ACCOUNT_BUTTON).click()
          driver.find_element(*Locators.EMAIL_INPUT_FIELD_ENTRANCE).send_keys(email)
          driver.find_element(*Locators.PASSWORD_INPUT_FIELD_ENTRANCE).send_keys(password)
@@ -82,7 +82,7 @@ class TestEntranceToPersonalCabinet:
          assert driver.find_element(*Locators.MAKE_ORDER_BUTTON).is_displayed()
 
      def test_entrance_through_registration_form(self, driver_with_account):
-         driver = driver_with_account
+         driver, email, password = driver_with_account
 
          driver.find_element(*Locators.ENTRANCE_ACCOUNT_BUTTON).click()
          WebDriverWait(driver, 5).until(EC.element_to_be_clickable(Locators.REGISTRATION_BUTTON_IN_ENTRANCE_FORM))
@@ -100,7 +100,7 @@ class TestEntranceToPersonalCabinet:
          assert driver.find_element(*Locators.MAKE_ORDER_BUTTON).is_displayed()
 
      def test_entrance_trough_frogot_password(self, driver_with_account):
-         driver = driver_with_account
+         driver, email, password = driver_with_account
 
          driver.find_element(*Locators.ENTRANCE_ACCOUNT_BUTTON).click()
          WebDriverWait(driver, 5).until(EC.element_to_be_clickable(Locators.BUTTON_RECOVER_PASSWORD))

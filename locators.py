@@ -9,10 +9,10 @@ class Locators:
     REGISTRATION_FORM_LINK = [By.XPATH, ".//a[text()='Зарегистрироваться']"]
 
     #3 поле ввода имени в форме регистрации
-    NAME_INPUT_FIELD = [By.XPATH, "(.//input[@class='text input__textfield text_type_main-default'])[1]"]
+    NAME_INPUT_FIELD = [By.XPATH, "//div[label[contains(text(),'Имя')]]//input"]
 
     #4 поле ввода email в форме регистрации
-    EMAIL_INPUT_FIELD = [By.XPATH, "(.//input[@class='text input__textfield text_type_main-default'])[2]"]
+    EMAIL_INPUT_FIELD = [By.XPATH, "//div[label[contains(text(),'Email')]]//input"]
 
     #5 поле ввода пароля в форме регистрации
     PASSWORD_INPUT_FIELD = [By.CSS_SELECTOR, "html input[name='Пароль']"]
@@ -42,13 +42,13 @@ class Locators:
     EXIT_BUTTON = [By.CSS_SELECTOR, "html button[class='Account_button__14Yp3 text text_type_main-medium text_color_inactive']"]
 
     #14 кнопка Булки
-    BREAD_BUTTON = [By.XPATH, ".//main/section[1]/div[1]/div[1]"]
+    BREAD_BUTTON = [By.XPATH, "//span[text()='Булки']"]
 
     #15 кнопка Соусы
-    SOUCE_BUTTON = [By.XPATH, ".//main/section[1]/div[1]/div[2]"]
+    SOUCE_BUTTON = [By.XPATH, "//span[text()='Соусы']"]
 
     #16 кнопка Начинки
-    TOPPING_BUTTON = [By.XPATH, ".//div[contains(text(), 'Начинки')]"]
+    TOPPING_BUTTON = [By.XPATH, "//span[text()='Начинки']"]
 
     #17 text wrong password
     SHORT_PASSWORD = [By.CSS_SELECTOR, "html p[class='input__error text_type_main-default']"]
@@ -56,11 +56,11 @@ class Locators:
     #18 кнопка оформить заказ
     MAKE_ORDER_BUTTON = [By.XPATH, ".//button[text()='Оформить заказ']"]
 
-    #19 поле ввода email в форме регистрации
-    EMAIL_INPUT_FIELD_ENTRANCE = [By.XPATH, "(.//input[@class='text input__textfield text_type_main-default'])[1]"]
+    #19 поле ввода email в форме входа в ЛК
+    EMAIL_INPUT_FIELD_ENTRANCE = [By.XPATH, "//div[label[contains(text(),'Email')]]//input"]
 
-    #20 поле ввода пароль в форме регистрации
-    PASSWORD_INPUT_FIELD_ENTRANCE = [By.XPATH, "(.//input[@class='text input__textfield text_type_main-default'])[2]"]
+    #20 поле ввода пароль в форме входа в ЛК
+    PASSWORD_INPUT_FIELD_ENTRANCE = [By.XPATH, "//div[label[contains(text(),'Пароль')]]//input"]
 
     #21 кнопка войти на форме регистрации
     ENTRANCE_ACCOUNT_BUTTON_IN_REGISTRATION_FORM = [By.XPATH, ".//a[@class ='Auth_link__1fOlj']"]
@@ -76,3 +76,12 @@ class Locators:
 
     #25 text Соберите бургер
     CONSTRUKT_YOUR_BURGER = [By.CSS_SELECTOR, "html h1[class='text text_type_main-large mb-5 mt-10']"]
+
+    #26 Таб Булки активна
+    ACTIVE_BREAD_BUTTON = [By.XPATH, "//div[contains(@class, 'tab_type_current')]//span[text()='Булки']"]
+
+    #27 Таб Соусы активна
+    ACTIVE_SOUCE_BUTTON = [By.XPATH, "//div[contains(@class, 'tab_type_current')]//span[text()='Соусы']"]
+
+    #28 Таб Соусы Начинки
+    ACTIVE_TOPPING_BUTTON = [By.XPATH, "//div[contains(@class, 'tab_type_current')]//span[text()='Начинки']"]
