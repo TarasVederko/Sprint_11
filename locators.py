@@ -15,13 +15,13 @@ class Locators:
     EMAIL_INPUT_FIELD = [By.XPATH, "//div[label[contains(text(),'Email')]]//input"]
 
     #5 поле ввода пароля в форме регистрации
-    PASSWORD_INPUT_FIELD = [By.CSS_SELECTOR, "html input[name='Пароль']"]
+    PASSWORD_INPUT_FIELD = [By.CSS_SELECTOR, "input[name='Пароль']"]
 
     #6 кнопка "Зарегистрироваться" в форме регистрации
     REGISTRATION_BUTTON = [By.XPATH, ".//button[text()='Зарегистрироваться']"]
 
     #7 кнопка "Войти в аккаунт" на главной
-    BUTTON_ENTRANCE_ACCAUNT = [By.CSS_SELECTOR, "html button[class='button_button__33qZ0 button_button_type_primary__1O7Bx button_button_size_large__G21Vg']"]
+    BUTTON_ENTRANCE_ACCAUNT = [By.CSS_SELECTOR, "button[class='button_button__33qZ0 button_button_type_primary__1O7Bx button_button_size_large__G21Vg']"]
 
     #8 кнопка "Войти" форме входа
     BUTTON_ENTRANCE = [By.XPATH, ".//button[text()='Войти']"]
@@ -39,7 +39,7 @@ class Locators:
     LOGO = [By.CSS_SELECTOR, "html svg[xmlns='http://www.w3.org/2000/svg']"]
 
     #13 кнопка Выход в личном кабинете
-    EXIT_BUTTON = [By.CSS_SELECTOR, "html button[class='Account_button__14Yp3 text text_type_main-medium text_color_inactive']"]
+    EXIT_BUTTON = [By.CSS_SELECTOR, "button[class='Account_button__14Yp3 text text_type_main-medium text_color_inactive']"]
 
     #14 кнопка Булки
     BREAD_BUTTON = [By.XPATH, "//span[text()='Булки']"]
@@ -51,7 +51,7 @@ class Locators:
     TOPPING_BUTTON = [By.XPATH, "//span[text()='Начинки']"]
 
     #17 text wrong password
-    SHORT_PASSWORD = [By.CSS_SELECTOR, "html p[class='input__error text_type_main-default']"]
+    SHORT_PASSWORD = [By.CSS_SELECTOR, "p[class='input__error text_type_main-default']"]
 
     #18 кнопка оформить заказ
     MAKE_ORDER_BUTTON = [By.XPATH, ".//button[text()='Оформить заказ']"]
@@ -69,19 +69,16 @@ class Locators:
     REGISTRATION_BUTTON_IN_ENTRANCE_FORM = [By.XPATH, ".//a[text()='Зарегистрироваться']"]
 
     #23 кнопка профиль в ЛК
-    PROFILE = [By.CSS_SELECTOR, "html a[class='Account_link__2ETsJ text text_type_main-medium text_color_inactive Account_link_active__2opc9']"]
+    PROFILE = [By.CSS_SELECTOR, "a[class='Account_link__2ETsJ text text_type_main-medium text_color_inactive Account_link_active__2opc9']"]
 
-    #24 кнопка "Войти" при вводе логина и пароля
-    BUTTON_ENTRANCE_ACCAUNT_LOGIN = [By.CSS_SELECTOR, "html button[class='button_button__33qZ0 button_button_type_primary__1O7Bx button_button_size_medium__3zxIa']"]
+    #24 text Соберите бургер
+    CONSTRUKT_YOUR_BURGER = [By.CSS_SELECTOR, "h1[class='text text_type_main-large mb-5 mt-10']"]
 
-    #25 text Соберите бургер
-    CONSTRUKT_YOUR_BURGER = [By.CSS_SELECTOR, "html h1[class='text text_type_main-large mb-5 mt-10']"]
-
-    #26 Таб Булки активна
+    #25 Таб Булки активна
     ACTIVE_BREAD_BUTTON = [By.XPATH, "//div[contains(@class, 'tab_type_current')]//span[text()='Булки']"]
 
-    #27 Таб Соусы активна
+    #26 Таб Соусы активна
     ACTIVE_SOUCE_BUTTON = [By.XPATH, "//div[contains(@class, 'tab_type_current')]//span[text()='Соусы']"]
 
-    #28 Таб Соусы Начинки
+    #27 Таб Соусы Начинки
     ACTIVE_TOPPING_BUTTON = [By.XPATH, "//div[contains(@class, 'tab_type_current')]//span[text()='Начинки']"]

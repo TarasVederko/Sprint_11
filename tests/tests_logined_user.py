@@ -46,5 +46,3 @@ class TestLoginedUser:
         result = driver.current_url
         expected = login_site
         assert result == expected
-
-

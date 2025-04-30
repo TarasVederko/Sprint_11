@@ -116,14 +116,3 @@ class TestEntranceToPersonalCabinet:
          WebDriverWait(driver, 10).until(EC.visibility_of_element_located(Locators.MAKE_ORDER_BUTTON))
 
          assert driver.find_element(*Locators.MAKE_ORDER_BUTTON).is_displayed()
-
-
-
-
-
-
-
-
-
-
-

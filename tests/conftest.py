@@ -58,7 +58,3 @@ def driver_logined(driver_with_account):
     driver.find_element(*Locators.BUTTON_ENTRANCE).click()
     WebDriverWait(driver, 10).until(EC.visibility_of_element_located(Locators.ENTRANCE_ACCOUNT_BUTTON))
     return driver
-
-
-
-
