@@ -62,7 +62,7 @@ class TestEntranceToPersonalCabinet:
      def test_entrance_through_button_on_main(self, driver_with_account):
          driver, email, password = driver_with_account
          driver.find_element(*Locators.BUTTON_ENTRANCE).click()
-         driver.find_element(*Locators.EMAIL_INPUT_FIELD_ENTRANCE).send_keys(email)
+         driver.find_element(*Locators.EMAIL_INPUT_FIELD).send_keys(email)
          driver.find_element(*Locators.PASSWORD_INPUT_FIELD_ENTRANCE).send_keys(password)
 
          driver.find_element(*Locators.BUTTON_ENTRANCE).click()
@@ -73,8 +73,8 @@ class TestEntranceToPersonalCabinet:
      def test_entrance_through_cabinet(self,driver_with_account):
          driver, email, password = driver_with_account
          driver.find_element(*Locators.ENTRANCE_ACCOUNT_BUTTON).click()
-         driver.find_element(*Locators.EMAIL_INPUT_FIELD_ENTRANCE).send_keys(email)
-         driver.find_element(*Locators.PASSWORD_INPUT_FIELD_ENTRANCE).send_keys(password)
+         driver.find_element(*Locators.EMAIL_INPUT_FIELD).send_keys(email)
+         driver.find_element(*Locators.PASSWORD_INPUT_FIELD).send_keys(password)
 
          driver.find_element(*Locators.BUTTON_ENTRANCE).click()
          WebDriverWait(driver, 10).until(EC.visibility_of_element_located(Locators.MAKE_ORDER_BUTTON))
@@ -91,7 +91,7 @@ class TestEntranceToPersonalCabinet:
          WebDriverWait(driver, 5).until(EC.element_to_be_clickable(Locators.ENTRANCE_ACCOUNT_BUTTON_IN_REGISTRATION_FORM))
 
          driver.find_element(*Locators.ENTRANCE_ACCOUNT_BUTTON_IN_REGISTRATION_FORM).click()
-         driver.find_element(*Locators.EMAIL_INPUT_FIELD_ENTRANCE).send_keys(email)
+         driver.find_element(*Locators.EMAIL_INPUT_FIELD).send_keys(email)
          driver.find_element(*Locators.PASSWORD_INPUT_FIELD_ENTRANCE).send_keys(password)
 
          driver.find_element(*Locators.BUTTON_ENTRANCE).click()
@@ -109,7 +109,7 @@ class TestEntranceToPersonalCabinet:
          WebDriverWait(driver, 5).until(EC.element_to_be_clickable(Locators.ENTRANCE_ACCOUNT_BUTTON_IN_REGISTRATION_FORM))
 
          driver.find_element(*Locators.ENTRANCE_ACCOUNT_BUTTON_IN_REGISTRATION_FORM).click()
-         driver.find_element(*Locators.EMAIL_INPUT_FIELD_ENTRANCE).send_keys(email)
+         driver.find_element(*Locators.EMAIL_INPUT_FIELD).send_keys(email)
          driver.find_element(*Locators.PASSWORD_INPUT_FIELD_ENTRANCE).send_keys(password)
 
          driver.find_element(*Locators.BUTTON_ENTRANCE).click()

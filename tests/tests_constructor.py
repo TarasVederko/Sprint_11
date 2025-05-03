@@ -7,7 +7,7 @@ class TestContsractor:
 
     def test_buns_section_activation(self, driver):
         souce_tab = WebDriverWait(driver, 10).until(
-            EC.element_to_be_clickable((Locators.SOUCE_BUTTON))
+            EC.element_to_be_clickable((Locators.SAUCE_BUTTON))
         )
         souce_tab.click()
 
@@ -26,13 +26,13 @@ class TestContsractor:
 
     def test_souce_section_activation(self, driver):
         souce_tab = WebDriverWait(driver, 10).until(
-            EC.element_to_be_clickable((Locators.SOUCE_BUTTON))
+            EC.element_to_be_clickable((Locators.SAUCE_BUTTON))
         )
         souce_tab.click()
 
         active_tab = WebDriverWait(driver, 5).until(
             EC.presence_of_element_located(
-                (Locators.ACTIVE_SOUCE_BUTTON))
+                (Locators.ACTIVE_SAUCE_BUTTON))
         )
         assert active_tab.is_displayed(), "Таб 'Соусы' не стал активным"
 

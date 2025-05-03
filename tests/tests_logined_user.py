@@ -18,8 +18,8 @@ class TestLoginedUser:
         driver = driver_logined
 
         driver.find_element(*Locators.ENTRANCE_ACCOUNT_BUTTON).click()
-        driver.find_element(*Locators.CONSTRUKTOR_BUTTON).click()
-        WebDriverWait(driver, 10).until(EC.visibility_of_element_located(Locators.CONSTRUKT_YOUR_BURGER))
+        driver.find_element(*Locators.CONSTRUCTOR_BUTTON).click()
+        WebDriverWait(driver, 10).until(EC.visibility_of_element_located(Locators.CONSTRUCT_YOUR_BURGER))
 
         result = driver.current_url
         expected = main_site
